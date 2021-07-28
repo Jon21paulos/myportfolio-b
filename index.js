@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
 app.use('/api', index);
+app.get('/', (req,res)=>{
+    res.send("Hello")
+});
 
 const CONNECTION_URL = 'mongodb+srv://Joni21paulos:ff@cluster0.4rzwt.mongodb.net/portfolio?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
